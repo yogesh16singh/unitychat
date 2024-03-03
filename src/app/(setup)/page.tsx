@@ -6,9 +6,7 @@ import { initialProfile } from "@/lib/initial-profile";
 const SetupPage = async () => {
   console.log('setup page')
   const profile = await initialProfile();
-  if(profile=="nouser") {
-    return <div>No User</div>;
-  }
+ 
   const server = await db.server.findFirst({
     where: {
       members: {

@@ -4,8 +4,8 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url = "mysql://avnadmin:AVNS_onIzp97q9DXLZIUDcDQ@mysql-131a2dbd-ys1997642-7eac.a.aivencloud.com:26783/defaultdb?ssl-mode=REQUIRED"
-  relationMode = "prisma"
+  url = env("DATABASE_URL")
+   relationMode = "prisma"
 }
 
 model Profile {
